@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="div1"></div>
+        <button onclick="clickme()">clickme</button>
+
+        <p id="p1"></p>
+        <p id="p2"></p>
+    
+</body>
+<script>
+    //steInterval and setTimeout in JS 
+    let p1 = document.getElementById("p1");
+    setInterval(()=>{
+        p1.innerHTML += 5
+    }, 5000);
+
+    setTimeout(() => {
+        clearInterval(intervalOne);
+        p1.innerHTML = "";
+    }, 10000)
+
+    //Dates in Javascript
+    let Date = new Date();
+    console.log(date);
+
+    console.log(date.getMilliseconds()); // to get current millisecond
+    console.log(date.getMinutes()); // to get current minutes
+    console.log
+
+    let p2 = document.getElementById("p2");
+    setTimeout(()=>{
+        p2.innerHTML = "My name is Ayobami"
+    }, 10000)
+
+</script>
+</html>

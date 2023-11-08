@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //local-storage in JS
+    //to store data in local storage
+
+    localStorage.setItem("name", "afolabi");
+
+    const colors = ["blue", "green", "yellow", "red", "purple", "grey", "white", "black", "brown", "orange"];
+    console.log(colors);
+    const stringifiedColors = JSON.stringify(colors);
+    console.log(stringifiedColors);
+    localStorage.setItem("colors", stringifiedColors);
+
+    let test = localStorage.getItem("colors");
+    test = JSON.parse(test);
+    console.log(test);
+
+    //to remove item from local storage//
+    localStorage.removeItem("colors")
+
+    //to clear all data from local storage
+    localStorage.clear();
+ 
+
+</script>
+</html>

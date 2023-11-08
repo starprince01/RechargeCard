@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h5>LOGIN</h5>
+    </div>
+    <div>
+        <Label for="email">email</Label>
+        <input required placeholder="ayojohn@mail" type="email"> <br><br>
+        <label for="password">password</label>
+        <input id="input" type="password">
+    <button id="show" onclick="show()">show</button>
+    <button id="hide" onclick="hide()">hide</button>
+ </div>
+</body>
+<script>
+    function show(){
+        document.getElementById("input").type = "text";
+        document.getElementById("hide").style.display = "block"
+        document.getElementById("show").style.display = "none"
+    }
+    function hide(){
+        document.getElementById("input").type = "password"
+        document.getElementById("hide").style.display = "none"
+        document.getElementById("show").style.display = "hide"
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Network Carrier">
+    <input type="Digit" placeholder="Enter Amount">
+    <button onclick="GenerateNumber()">Generate Number</button>
+    <div id="result"></div>
+
+    <h1>Check the Digit</h1>
+    <input type="text" id="checkNumber" placeholder="Enter the Digit">
+    <button onclick="checktheDigit()">Check number</button>
+</body>
+<script>
+    function GenerateNumber() {
+        let random = Math.random() * 90000000000000000;
+
+        localStorage.setItem("theDigit", random);
+
+
+        document.getElementById("result").innerHTML = "Generate Number: " + random;
+
+    }
+    function checktheDigit() {
+        let enterednumber = document.getElementById("checkNumber").value;
+        let storedNumber = localStorage.getItem("theDigit");
+
+        if (enterednumber === storedNumber) {
+            window.location.href = "success.html";
+         } else {
+            window.location.href = "unsuccess.html";
+        }
+    }
+</script>
+</html>
